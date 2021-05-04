@@ -52,7 +52,7 @@ export class ConnexionComponent implements OnInit {
   {
     localStorage.setItem("grade",us.grade);
     localStorage.setItem("id",us.id);
-  window.location.replace("/#/accueil");
+  window.location.replace("/#/dashboard");
   this.b=true;
   
   
