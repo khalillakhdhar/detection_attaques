@@ -21,6 +21,7 @@ export class TableListComponent implements OnInit {
   }
   adduser()
   {
+    this.user.ipref=[];
  let us=Object.assign({},this.user);
  this.userService.create_NewUser(us);
  alert("ajouté avec succés!");
