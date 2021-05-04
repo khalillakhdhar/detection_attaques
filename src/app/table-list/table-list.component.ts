@@ -15,9 +15,9 @@ export class TableListComponent implements OnInit {
   constructor(private userService:UserService) { }
   
   ngOnInit(): void {
-    localStorage.clear();
     this.user=new User();
     this.read();
+    this.user.grade='user';
   }
   adduser()
   {
@@ -56,7 +56,7 @@ this.user=new User();
   }
   supprimer(id)
 {
-  if(confirm("vous voulez supprimer l'User?"))
+  if(confirm("vous voulez supprimer l'utilisateur?"))
   this.userService.delete_User(id);
 }
 
