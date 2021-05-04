@@ -17,7 +17,7 @@
       <input type="text" id="login" required [(ngModel)]="user.login" class="fadeIn second" name="login" placeholder="login">
 
       <input type="password" id="password" required [(ngModel)]="user.mdp" class="fadeIn third" name="mdp" placeholder="mot de passe">
-      <input type="submit"  class="fadeIn fourth" value="Log In">
+      <input type="submit" (click)="verif()"  class="fadeIn fourth" value="Log In">
     </form>
 
     <!-- Remind Passowrd -->
