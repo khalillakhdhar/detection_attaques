@@ -28,6 +28,10 @@ export class SidebarComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    if(localStorage.length==0)
+    {
+      window.location.replace("#/login")
+    }
     this.menuItems = ROUTES.filter(menuItem => menuItem);
   }
   isMobileMenu() {
