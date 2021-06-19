@@ -13,7 +13,12 @@ export const ROUTES: RouteInfo[] = [
     { path: '/table-list', title: 'Utilisateur',  icon:'content_paste', class: '' },
     { path: '/typography', title: 'Fichiers',  icon:'library_books', class: '' },
  
-    { path: '/notifications', title: 'Notifications',  icon:'notifications', class: '' },
+    { path: '/login', title: 'Déconnexion',  icon:'unarchive', class: 'active-pro' },
+];
+export const ROUTES2: RouteInfo[] = [
+    { path: '/user-profile', title: 'Profile',  icon:'person', class: '' },
+    { path: '/typography', title: 'Fichiers',  icon:'library_books', class: '' },
+ 
     { path: '/login', title: 'Déconnexion',  icon:'unarchive', class: 'active-pro' },
 ];
 
@@ -32,6 +37,9 @@ export class SidebarComponent implements OnInit {
     {
       window.location.replace("#/login")
     }
+    if(localStorage.getItem("grade")=="user")
+    this.menuItems = ROUTES2.filter(menuItem => menuItem);
+    else
     this.menuItems = ROUTES.filter(menuItem => menuItem);
   }
   isMobileMenu() {

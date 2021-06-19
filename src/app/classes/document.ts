@@ -1,7 +1,8 @@
 export class Document {
     id:string;
-    type:string;
-    titre:string;
-    description:string;
-    url:string;
+date_heure:string;
+url:string;
+detection:string;
+description:string;
+classe:string;
 }
